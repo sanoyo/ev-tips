@@ -1,2 +1,2 @@
-＃ challenge-everyday
+# challenge-everyday
 毎日コード書いていくためのリポジトリ
