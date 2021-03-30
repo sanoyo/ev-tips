@@ -1,4 +1,20 @@
 
+## distinct on
+```sql
+select distinct on (c1) * from t1;
+```
+
+https://qiita.com/katsunory/items/4b2faa753cce65d8cba0
+
+
+distinct したカラムで order byすること
+
+```sql
+select distinct city from weather order by city;
+```
+
+
+https://www.postgresql.jp/document/8.0/html/tutorial-select.html
 
 ## IN
 ```sql
