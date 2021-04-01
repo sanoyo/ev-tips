@@ -1,0 +1,13 @@
+# 独自の置換
+# https://cloud.google.com/cloud-build/docs/configuring-builds/substitute-variable-values?hl=ja#using_user-defined_substitutions
+
+# >デフォルトでは、置換変数や置換がない場合、ビルドでエラーが返されます。ただし、ALLOW_LOOSE オプションを使用すると、このチェックをスキップできます。
+# https://cloud.google.com/build/docs/build-config?hl=ja#substitutions
+
+steps:
+- name: 'ubuntu'
+  args: ['echo', 'hello ${_SUB_VALUE}']
+substitutions:
+    _SUB_VALUE: world
+options:
+    substitution_option: 'ALLOW_LOOSE'
