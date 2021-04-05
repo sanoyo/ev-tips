@@ -1,6 +1,13 @@
 // ref: https://github.com/jvalecillos/sqlmock-examples
 package main
 
+import (
+	"fmt"
+	"testing"
+
+	"github.com/DATA-DOG/go-sqlmock"
+)
+
 func Test_example(t *testing.T) {
 
 	tests := []struct {
@@ -34,7 +41,7 @@ func Test_example(t *testing.T) {
 			defer db.Close()
 			// set mock expectations
 			tt.mockClosure(mock)
-						
+
 			// ...
 
 			// Checking all expectations were met
