@@ -114,7 +114,6 @@ https://qiita.com/sfp_waterwalker/items/acc7f95f6ab5aa5412f3
 ## ON CONFLICT
 ### DO NOTHING
 ON CONFLICT DO NOTHINGは代替の動作として、単に行の挿入をしなくなるだけ。
-すでにデータが存在する場合は、作
 
 ```
 ISNERT INTO テーブル名 VALUES (1,1,1) ON CONFLICT DO NOTHING;
@@ -128,3 +127,7 @@ ON CONFLICT ON CONSTRAINT distributors_pkey DO NOTHING;
 
 https://www.postgresql.jp/document/9.5/html/sql-insert.html
 https://dev.classmethod.jp/articles/postgresql-9-5-new-function-upsert-use/
+
+
+### 配列関数
+https://www.postgresql.jp/document/9.3/html/functions-array.html
