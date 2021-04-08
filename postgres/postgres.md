@@ -72,7 +72,7 @@ select * from users
 where 
     romaji like '%a%'and
     exists (
-	select 1 from sales
+	select 1 from salesgit st
 	where sales.id = users.id);
 ```
 
@@ -80,14 +80,34 @@ https://itsakura.com/sql-exists
 http://www.sql-reference.com/select/subquery_exists.html
 
 
+## case when
+### 単純CASE式
+`gender`が男であれば、1として扱うということを意味する。
+
+```
+CASE gender
+    WHEN '男' THEN 1
+    WHEN '女' THEN 2
+    ELSE 99
+END
+```
+
+### 検索CASE式
+```
+CASE
+    WHEN gender = '男' THEN 1
+    WHEN gender = '女' THEN 2
+    ELSE 99
+END
 
 
-
-
-
-
-
-
-
+SELECT
+    id,
+    name,
+    CASE WHEN age >= 60 THEN 1 ELSE 0 END AS senior
+FROM member
+LIMIT 20
+```
+https://qiita.com/sfp_waterwalker/items/acc7f95f6ab5aa5412f3
 
 
