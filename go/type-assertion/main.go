@@ -34,4 +34,17 @@ func main() {
 	default:
 		fmt.Printf("%+v\n", err)
 	}
+
+	var i interface{}
+	i = int(42)
+
+	a, ok := i.(int)
+	fmt.Println(a)
+	fmt.Println(ok)
+	// a == 42 and ok == true
+
+	b, ok := i.(string)
+	fmt.Println(b)
+	fmt.Println(ok)
+	// b == "" (default value) and ok == false
 }
