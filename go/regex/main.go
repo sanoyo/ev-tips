@@ -14,4 +14,7 @@ func main() {
 	reQuery := regexp.QuoteMeta(query)
 	fmt.Println(query)
 	fmt.Println(reQuery)
+
+	rep := regexp.MustCompile(`[\s]{2,}`)
+	fmt.Println(rep)
 }
