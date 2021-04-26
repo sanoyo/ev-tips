@@ -1,0 +1,4 @@
+-- DATE_TRUNC ( element, expression )
+
+SELECT DATE_TRUNC('HOUR', TIMESTAMP '2019-03-30 13:38:40') AS HOUR;
+--  2019-03-30 13:00:00
