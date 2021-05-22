@@ -36,16 +36,19 @@ type Console struct {
 	offset    int
 }
 
+// facade をインスタンス化
 func NewConsole() *Console {
 	b := NewBuffer(10, 10)
 	v := NewViewport(b)
 	return &Console{[]*Buffer{b}, []*Viewport{v}, 0}
 }
 
+// facde を使うところ
 func (c *Console) GetCharacterAt(index int) rune {
 	return c.viewports[0].GetCharacterAt(index)
 }
 
+// facde を使うところ
 func main() {
 	c := NewConsole()
 	u := c.GetCharacterAt(1)
