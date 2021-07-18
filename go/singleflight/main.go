@@ -13,7 +13,7 @@ var group singleflight.Group
 
 func doSomething(name string) {
 	v, err, shared := group.Do(name, func() (interface{}, error) {
-		time.Sleep(5 * time.Millisecond)
+		time.Sleep(10 * time.Millisecond)
 		return time.Now(), nil
 	})
 	if err != nil {
