@@ -8,4 +8,5 @@ require (
 	github.com/lestrrat/go-server-starter v0.0.0-20180220115249-6ac0b358431b // indirect
 	github.com/lib/pq v1.10.0 // indirect
 	github.com/mitchellh/cli v1.1.2
+	gopkg.in/src-d/go-git.v4 v4.13.1 // indirect
 )
